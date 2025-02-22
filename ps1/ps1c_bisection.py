@@ -9,11 +9,13 @@ current_savings_rate = (low_rate + high_rate) / 2.0
 epsilon = 100
 current_savings = 0
 steps = 0 
+impossible = False
 
 while (abs(current_savings - portion_down_payment) >= epsilon):
     # even with a savings rate of 99%, the code is still reiterating which means it is impossible to find a soln
     if (current_savings_rate / 10000 >= 0.99):
         print("It is not possible to pay the down payment in three years.")
+        impossible = True
         break
     monthly_salary = starting_salary / 12
     current_savings = 0
@@ -29,5 +31,6 @@ while (abs(current_savings - portion_down_payment) >= epsilon):
     current_savings_rate = (low_rate + high_rate) / 2.0
     steps += 1
 
-print("Best savings rate:", current_savings_rate / 10000)
-print("Steps in bisection search:", steps)
+if (not impossible):
+    print("Best savings rate:", current_savings_rate / 10000)
+    print("Steps in bisection search:", steps)
