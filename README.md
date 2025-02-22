@@ -2,4 +2,4 @@
 
 Link: https://ocw.mit.edu/courses/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/
 
-This repo contains my personal solutions to the problem sets for this module.
+This repo contains my personal solutions to the problem sets for this module. Correctness of any code posted here is not guaranteed.
